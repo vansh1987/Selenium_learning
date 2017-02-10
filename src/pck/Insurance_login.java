@@ -11,12 +11,12 @@ public class Insurance_login
 	
 	public void openurl()
 	{
-		driver.get("https://www.pocketclinik.com/login");
+		driver.get("https://dev.pocketclinik.com/login");
 	}
 	
 	public void login() throws Exception
 	{
-		driver.findElement(By.name("email")).sendKeys("uhj68380@dsiay.com");
+		driver.findElement(By.name("email")).sendKeys("wsa33047@psoxs.com");
 		Thread.sleep(6000);
 		
 		driver.findElement(By.name("password")).sendKeys("123456");
