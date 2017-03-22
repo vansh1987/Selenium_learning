@@ -36,21 +36,23 @@ public class Insurance_login2
 	
 	public void clickOnPlan() throws Exception
 	{
-		driver.findElement(By.xpath(".//*[@id='app-layout']/div[1]/div/ul/li[2]/a")).click();
-		Thread.sleep(3000);
+		driver.findElement(By.xpath(".//*[@id='app-layout']/div[2]/div/ul/li[2]/a")).click();
+		Thread.sleep(5000);
 		//driver.findElement(By.xpath(".//*[@id='app-layout']/div[2]/div[2]/div/div[1]/div/div/h2/span/a")).click();
 		//Thread.sleep(3000);
 	}
 	
 	public void createPlan() throws Exception
 	{
-		driver.findElement(By.xpath(".//*[@id='app-layout']/div[1]/div/ul/li[2]/a")).click();
+	
+		driver.findElement(By.xpath(".//*[@id='app-layout']/div[2]/div/ul/li[2]/a")).click();
+		//driver.findElement(By.className("active")).click();
 		Thread.sleep(3000);
 		
 		driver.findElement(By.className("pull-right")).click(); //Thread.sleep(3000);
-		driver.findElement(By.xpath(".//*[@id='app-layout']/div[3]/div[2]/div/div[1]/div/div/h2/span/a")).click();
+		driver.findElement(By.xpath(".//*[@id='app-layout']/div[4]/div[2]/div/div[1]/div/div/h2/span/a")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath(".//*[@id='app-layout']/div[3]/div[2]/div/div[1]/div/div/div[2]/div[3]/div/div/form/div/div[2]/div[1]/div/input")).sendKeys("Deal");
+		driver.findElement(By.xpath(".//*[@id='app-layout']/div[4]/div[2]/div/div[1]/div/div/div[2]/div[3]/div/div/form/div/div[2]/div[1]/div/input")).sendKeys("Deal");
 
 		//driver.findElement(By.className("form-control")).sendKeys("New Plan");
 		
