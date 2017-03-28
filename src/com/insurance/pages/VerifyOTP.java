@@ -43,7 +43,7 @@ public class VerifyOTP
 	{
 		try
 		{
-		driver.findElement(By.id("by_email")).click();
+		driver.findElement(By.id("by_sms")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.id("verify_step_one")).click();
 		}
