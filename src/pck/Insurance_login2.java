@@ -1,21 +1,27 @@
 package pck;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.*;
 
 @SuppressWarnings("unused")
 public class Insurance_login2 
 {
 	
 	WebDriver driver = new FirefoxDriver();
+	String baseUrl = "https://dev.pocketclinik.com";
 	
 	public void openurl() throws Exception
 	{
 		driver.get("https://dev.pocketclinik.com/logind/28");
+		
 		Thread.sleep(4000);
 	}
 	/*
@@ -41,17 +47,25 @@ public class Insurance_login2
 		Thread.sleep(5000);
 		//driver.findElement(By.xpath(".//*[@id='app-layout']/div[2]/div[2]/div/div[1]/div/div/h2/span/a")).click();
 		//Thread.sleep(3000);
+		
 	}
 	
 	public void createPlan() throws Exception
 	{
-	
-		driver.findElement(By.xpath(".//*[@id='app-layout']/div[2]/div/ul/li[2]/a")).click();
+		
+		//driver.findElement(By.xpath(".//*[@id='app-layout']/div[2]/div/ul/li[2]/a")).click();
+		//List<WebElement> links = driver.findElements(By.cssSelector("[href*='/plan']"));
+		//@FindBy(how = How.XPATH, using = ".//*[@id='app-layout']/div[2]/div/ul/li[2]/a").click();
+		//driver.findElement(By.xpath("//a[contains(.,'plan')]")).click();
+		//driver.findElement(By.linkText("plan")).sendKeys(Keys.ENTER);
+		//driver.findElement(By.xpath("//*[contains(text(),'plan')]")).click();
+		driver.get(baseUrl + "/plan");
 		//driver.findElement(By.className("active")).click();
 		Thread.sleep(3000);
 		
 		driver.findElement(By.className("pull-right")).click(); //Thread.sleep(3000);
-		driver.findElement(By.xpath(".//*[@id='app-layout']/div[4]/div[2]/div/div[1]/div/div/h2/span/a")).click();
+		driver.get(baseUrl + "/plan/create");
+		//driver.findElement(By.xpath(".//*[@id='app-layout']/div[4]/div[2]/div/div[1]/div/div/h2/span/a")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath(".//*[@id='app-layout']/div[4]/div[2]/div/div[1]/div/div/div[2]/div[3]/div/div/form/div/div[2]/div[1]/div/input")).sendKeys("Deal");
 

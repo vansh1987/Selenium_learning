@@ -24,10 +24,14 @@ public class InsuranceMain {
 		VerifyOTP v = new VerifyOTP(driver);
 		v.verify_Account();
 		v.verify_OTP();
+		Thread.sleep(2000);
 		
 		CreatePlan c = new CreatePlan(driver, baseUrl);
 		c.clickOnPlan();
 		c.createPlan();
+		
+		LogoutPage lp = new LogoutPage(driver);
+		lp.Logout();
 		}
 		catch(Exception e)
 		{
