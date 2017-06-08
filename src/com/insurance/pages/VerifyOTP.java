@@ -16,7 +16,7 @@ public class VerifyOTP
 	/**
 	 * @param args
 	 */
-	 WebDriver driver;
+	 WebDriver driver;// webdriver
 	
 	public VerifyOTP(WebDriver driver) 
 	{
