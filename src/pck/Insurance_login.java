@@ -27,22 +27,37 @@ public class Insurance_login
 	
 	public void clickinglinks(String str) throws Exception
 	{
-		driver.findElement(By.xpath(str));
+		driver.findElement(By.xpath(str)).click();
 	}
 	
 	public void logout() throws Exception
 	{
-		driver.findElement(By.className(".//*[@id='app-layout']/div[2]/div[1]/div/div/div/div/ul/li/a/div")).click();
+		driver.findElement(By.xpath(".//*[@id='app-layout']/div[2]/div[1]/div/div/div/div/ul/li/a/div")).click();
+		//driver.findElement(By.ByClassName.className("caret")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(".//*[@id='app-layout']/div[2]/div[1]/div/div/div/div/ul/li/ul/li[2]/a")).click();
+		Thread.sleep(3000);
+		driver.quit();
 	}
+	
 	public static void main(String[] args) throws Exception
 	{
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Demo\\Downloads\\geckodriver-v0.13.0-win64\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\asd\\Downloads\\geckodriver-v0.13.0-win64\\geckodriver.exe");
 		Insurance_login i = new Insurance_login();
 		i.openurl();
 		i.login();
+		i.clickinglinks(".//*[@id='app-layout']/div[1]/div/ul/li[1]/a");
+		Thread.sleep(3000);
+		i.clickinglinks(".//*[@id='app-layout']/div[1]/div/ul/li[2]/a");
+		Thread.sleep(3000);
+		i.clickinglinks(".//*[@id='app-layout']/div[1]/div/ul/li[3]/a");
+		Thread.sleep(3000);
+		i.clickinglinks(".//*[@id='app-layout']/div[1]/div/ul/li[4]/a");
+		Thread.sleep(3000);
+		i.clickinglinks(".//*[@id='app-layout']/div[1]/div/ul/li[5]/a");
+		Thread.sleep(3000);
 		i.logout();
+		
 	}
 
 }
