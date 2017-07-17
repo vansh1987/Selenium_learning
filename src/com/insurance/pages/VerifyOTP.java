@@ -21,17 +21,16 @@ public class VerifyOTP
 	public VerifyOTP(WebDriver driver) 
 	{
 		this.driver = driver;
-		// TODO Auto-generated constructor stub
 	}
 
 	public void verify_OTP() 
 	{
 		try
 		{
-		Thread.sleep(2000);
-		driver.findElement(By.id("otp")).sendKeys("ab@9090");
-		Thread.sleep(2000);
-		driver.findElement(By.id("submit_otp")).click();
+			Thread.sleep(2000);
+			driver.findElement(By.id("otp")).sendKeys("ab@9090");
+			Thread.sleep(2000);
+			driver.findElement(By.id("submit_otp")).click();
 		}
 		catch(Exception e)
 		{
@@ -43,12 +42,11 @@ public class VerifyOTP
 	{
 		try
 		{
-		//driver.findElement(By.id("by_sms")).click();
-		driver.findElement(By.cssSelector("input[id='by_sms']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.id("verify_step_one")).click();
-		
+			driver.findElement(By.cssSelector("input[id='by_sms']")).click();
+			Thread.sleep(2000);
+			driver.findElement(By.id("verify_step_one")).click();
 		}
+		
 		catch(Exception e)
 		{
 			System.out.println(e);
